@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { assets } from "@/assets/assets";
 import { IoSearchSharp } from "react-icons/io5";
 import { useClerk, UserButton, useUser } from "@clerk/clerk-react";
 import { Menu, X } from "lucide-react";
 import { MdOutlineQuestionMark } from "react-icons/md";
+import { assets } from "../assets/assets";
 
 const Navbar = () => {
     const [openMobileMenu, setOpenMobileMenu] = useState(false);
@@ -16,6 +16,27 @@ const Navbar = () => {
     const { openSignIn } = useClerk();
     const { user } = useUser();
     const navigate = useNavigate();
+    const langMap = {
+        English: "en",
+        Hindi: "hi",
+        Gujarati: "gu",
+        Marathi: "mr",
+    };
+
+    const handleSelect = (label) => {
+        setSelectedLang(label);
+        setOpenLang(false);
+
+        const code = langMap[label] || "en";
+
+        // if helper exists, use it
+        if (window.setGoogleTranslateLanguage) {
+            window.setGoogleTranslateLanguage(code);
+        } else {
+            // fallback: navigate to the Google widget URL (rare)
+            console.warn("Google translate not loaded yet");
+        }
+    };
 
     // Close dropdowns on outside click
     useEffect(() => {
@@ -31,13 +52,19 @@ const Navbar = () => {
         return () => document.removeEventListener("mousedown", handleClickOutside);
     }, []);
 
-    const handleSelect = (lang) => {
-        setSelectedLang(lang);
-        setOpenLang(false);
-    };
+    useEffect(() => {
+        window.setGoogleTranslateLanguage = (lang) => {
+            const select = document.querySelector(".goog-te-combo");
+            if (select) {
+                select.value = lang;
+                select.dispatchEvent(new Event("change"));
+            }
+        };
+    }, []);
+
 
     return (
-        <nav className="w-full fixed top-0 z-50 bg-white shadow-md overflow-x-hidden overflow-y-hidden">
+        <nav className="w-full fixed top-0 z-50 bg-white shadow-md">
             {/* Top Navbar */}
             <div className="flex items-center justify-between px-4 sm:px-6 md:px-8 lg:px-12 py-2 border-b border-gray-200">
                 <div className="flex items-center justify-center">
@@ -87,7 +114,7 @@ const Navbar = () => {
                         {openLang && (
                             <div className="absolute bg-white border border-gray-300 rounded shadow-md mt-2 w-32 z-50">
                                 <ul className="flex flex-col text-left">
-                                    {["English", "Hindi", "Gujarati", "Marathi"].map((lang) => (
+                                    {["English","Hindi", "Gujarati", "Marathi"].map((lang) => (
                                         <li
                                             key={lang}
                                             className="px-4 py-2 cursor-pointer hover:bg-gray-100"
@@ -147,7 +174,6 @@ const Navbar = () => {
                     </div>
                     {user ? (
                         <UserButton
-                            afterSignOutUrl="/"
                             appearance={{
                                 elements: {
                                     avatarBox: { width: "38px", height: "38px" },

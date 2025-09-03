@@ -27,3 +27,28 @@ button {
 html, body {
   overflow-x: hidden;
 }
+
+
+/* hide the google translate top banner iframe that sometimes appears */
+.goog-te-banner-frame.skiptranslate { display: none !important; }
+
+/* remove any top offset applied by google widget */
+body { top: 0 !important; }
+
+/* hide google logo and link inside the widget (keeps only the select combo accessible) */
+.goog-logo-link { display: none !important; }
+.goog-te-gadget-icon { display: none !important; }
+
+/* ensure the invisible (off-screen) select still exists and is usable */
+.goog-te-combo { display: inline-block !important; }
+
+/* if you want the internal injected iframe not to affect layout */
+iframe.goog-te-banner-frame { display: none !important; }
+
+/* Hide Google Translate top bar */
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+body {
+  top: 0px !important; /* remove extra margin */
+}
