@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import ThemeToggle from "./ThemeToggle";
 import { assets } from "@/assets/assets";
 import { IoSearchSharp } from "react-icons/io5";
 import { useClerk, UserButton, useUser } from "@clerk/clerk-react";

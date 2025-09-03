@@ -1,9 +1,7 @@
 import { Link } from "react-router-dom";
 import { assets, navLinks } from "../assets/assets";
-import { useThemeContext } from "../context/ThemeContext";
 
 export default function Footer() {
-    const { theme } = useThemeContext();
     return (
         <footer className="relative px-6 md:px-16 lg:px-24 xl:px-32 w-full dark:text-slate-50 bg-blue-950 text-white pt-4 bottom-0">
             {/* <img className="absolute max-w-4xl w-full h-auto -mt-30 max-md:px-4 right-0 md:right-16 lg:right-24 xl:right-32 top-0 pointer-events-none" src={theme === "dark" ? "/assets/landing-text-dark.svg" : "/assets/landing-text-light.svg"} alt="landing" width={930} height={340} priority fetchPriority="high" /> */}

@@ -1,6 +1,5 @@
 import React from 'react'
 import HeroSection from '../components/Home/HeroSection'
-import { useThemeContext } from '../context/ThemeContext';
 import { FaqSection } from '../components/Home/FaqSection';
 import Testimonial from '../components/Home/Testimonial';
 import GetStarted from '../components/Home/GetStarted';
@@ -8,7 +7,6 @@ import FeatureSection from '../components/Home/FeatureSection';
 import Internship from '../components/Home/Internship';
 
 const Home = () => {
-  const { theme } = useThemeContext();
 
   return (
     <div className=" min-h-screen bg-no-repeat bg-cover bg-gradient-to-bl from-blue-50 to-white/80">

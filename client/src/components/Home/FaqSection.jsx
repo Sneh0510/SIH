@@ -1,10 +1,8 @@
 import { ChevronDown } from "lucide-react";
 import { useState } from "react";
-import { useThemeContext } from "../../context/ThemeContext";
 import { faqsData } from "../../assets/assets";
 
 export const FaqSection = () => {
-    const { theme } = useThemeContext();
     const [openIndex, setOpenIndex] = useState(null);
     
     return (

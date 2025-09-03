@@ -1,11 +1,9 @@
 import React from 'react'
 import Marquee from "react-fast-marquee";
 import { assets, companiesLogo } from '@/assets/assets'
-import { useThemeContext } from '../../context/ThemeContext';
 import { useNavigate } from 'react-router-dom';
 
 const HeroSection = () => {
-  const { theme } = useThemeContext();
   const navigate = useNavigate();
 
   return (
