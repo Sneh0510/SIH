@@ -1,11 +1,13 @@
 import logo from './logo.png';
+import logo_dark from './logo_dark.png';
 import choose from './choose.svg'
 import star_group from './star_group.png'
-import framer from "../assets/companies-logo/framer.svg";
-import huawei from "../assets/companies-logo/huawei.svg";
-import instagram from "../assets/companies-logo/instagram.svg";
-import microsoft from "../assets/companies-logo/microsoft.svg";
-import walmart from "../assets/companies-logo/walmart.svg";
+import framer from "./companies-logo/framer.svg";
+import huawei from "./companies-logo/huawei.svg";
+import instagram from "./companies-logo/instagram.svg";
+import microsoft from "./companies-logo/microsoft.svg";
+import walmart from "./companies-logo/walmart.svg";
+import user_image from "./user_image.png";
 import { Brain, Send, BadgeCheck, Smartphone } from "lucide-react";
 
 export const companiesLogo = [
@@ -18,8 +20,10 @@ export const companiesLogo = [
 
 export const assets = {
     logo,
+    logo_dark,
     choose,
-    star_group
+    star_group,
+    user_image,
 }
 
 export const cardsData = [
@@ -117,4 +121,169 @@ export const featuresData = [
     title: "Accessible Anywhere",
     description: "Mobile-friendly design so you can explore internships anytime, anywhere.",
   },
+];
+
+export const internships = [
+  {
+    role: "Product Operations",
+    company: "Times Internet",
+    location: "Gurgaon",
+    stipend: "₹14,000 - 15,000 /month",
+    duration: "6 Months",
+    activelyHiring: true,
+  },
+  {
+    role: "Warehouse",
+    company: "Agarwal Packers & Movers",
+    location: "Mumbai",
+    stipend: "₹6,000 - 10,000 /month",
+    duration: "6 Months",
+    activelyHiring: true,
+  },
+  {
+    role: "Video Editing/Making",
+    company: "Viacom India LLP",
+    location: "Gurgaon",
+    stipend: "₹5,000 - 8,000 /month",
+    duration: "3 Months",
+    activelyHiring: false,
+  },
+  {
+    role: "Human Resources (HR)",
+    company: "Flipspaces",
+    location: "Mumbai",
+    stipend: "₹8,000 - 10,000 /month",
+    duration: "3 Months",
+    activelyHiring: true,
+  },
+  {
+    role: "Software Development Intern",
+    company: "Infosys",
+    location: "Bengaluru",
+    stipend: "₹18,000 - 20,000 /month",
+    duration: "6 Months",
+    activelyHiring: true,
+  },
+  {
+    role: "Marketing Intern",
+    company: "Zomato",
+    location: "Delhi",
+    stipend: "₹10,000 - 12,000 /month",
+    duration: "3 Months",
+    activelyHiring: true,
+  },
+  {
+    role: "Graphic Designer",
+    company: "Byju's",
+    location: "Bengaluru",
+    stipend: "₹6,000 - 8,000 /month",
+    duration: "2 Months",
+    activelyHiring: false,
+  },
+  {
+    role: "Data Analyst Intern",
+    company: "Paytm",
+    location: "Noida",
+    stipend: "₹15,000 - 18,000 /month",
+    duration: "5 Months",
+    activelyHiring: true,
+  },
+  {
+    role: "Sales Intern",
+    company: "Urban Company",
+    location: "Gurgaon",
+    stipend: "₹8,000 - 10,000 /month",
+    duration: "3 Months",
+    activelyHiring: true,
+  },
+  {
+    role: "Content Writing Intern",
+    company: "YourStory",
+    location: "Bengaluru",
+    stipend: "₹5,000 - 7,000 /month",
+    duration: "2 Months",
+    activelyHiring: false,
+  },
+  {
+    role: "Operations Intern",
+    company: "Swiggy",
+    location: "Hyderabad",
+    stipend: "₹12,000 - 14,000 /month",
+    duration: "4 Months",
+    activelyHiring: true,
+  },
+  {
+    role: "UI/UX Designer",
+    company: "OYO Rooms",
+    location: "Gurgaon",
+    stipend: "₹10,000 - 12,000 /month",
+    duration: "3 Months",
+    activelyHiring: true,
+  },
+  {
+    role: "Customer Support",
+    company: "Meesho",
+    location: "Bengaluru",
+    stipend: "₹7,000 - 9,000 /month",
+    duration: "3 Months",
+    activelyHiring: false,
+  },
+  {
+    role: "Business Development Intern",
+    company: "Unacademy",
+    location: "Pune",
+    stipend: "₹9,000 - 11,000 /month",
+    duration: "3 Months",
+    activelyHiring: true,
+  },
+  {
+    role: "Finance Intern",
+    company: "HDFC Bank",
+    location: "Mumbai",
+    stipend: "₹14,000 - 16,000 /month",
+    duration: "6 Months",
+    activelyHiring: true,
+  },
+  {
+    role: "Digital Marketing Intern",
+    company: "Nykaa",
+    location: "Delhi",
+    stipend: "₹10,000 - 13,000 /month",
+    duration: "4 Months",
+    activelyHiring: true,
+  },
+];
+
+export const steps = [
+    "Basic Info",
+    "Education",
+    "Skills",
+    "Fields of Interest",
+    "Availability",
+];
+
+export const skillSuggestions = [
+    "React.js",
+    "Node.js",
+    "Python",
+    "Django",
+    "Machine Learning",
+    "Data Analysis",
+    "SQL",
+    "MongoDB",
+    "Java",
+    "C++",
+    "Communication",
+    "Problem Solving",
+];
+
+export const fieldSuggestions = [
+    "Web Development",
+    "Mobile Development",
+    "Artificial Intelligence",
+    "Data Science",
+    "Cybersecurity",
+    "Cloud Computing",
+    "UI/UX Design",
+    "Software Engineering",
 ];

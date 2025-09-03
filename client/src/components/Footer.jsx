@@ -5,11 +5,11 @@ import { useThemeContext } from "../context/ThemeContext";
 export default function Footer() {
     const { theme } = useThemeContext();
     return (
-        <footer className="relative px-6 md:px-16 lg:px-24 xl:px-32 mt-40 w-full dark:text-slate-50">
+        <footer className="relative px-6 md:px-16 lg:px-24 xl:px-32 w-full dark:text-slate-50 bg-blue-950 text-white pt-4 bottom-0">
             {/* <img className="absolute max-w-4xl w-full h-auto -mt-30 max-md:px-4 right-0 md:right-16 lg:right-24 xl:right-32 top-0 pointer-events-none" src={theme === "dark" ? "/assets/landing-text-dark.svg" : "/assets/landing-text-light.svg"} alt="landing" width={930} height={340} priority fetchPriority="high" /> */}
             <div className="flex flex-col md:flex-row justify-between w-full gap-10 border-b border-gray-200 dark:border-slate-700 pb-6">
                 <div className="md:max-w-114">
-                    <img className="h-10 md:h-13 w-auto shrink-0" src={assets.logo} alt="Logo" width={80} priority fetchPriority="high" />
+                    <img className="h-15 md:h-18 w-auto shrink-0" src={assets.logo_dark} alt="Logo" width={123} priority fetchPriority="high" />
                     <p className="mt-6 leading-6 font-extralight text-[15px]">
                         Discover internships tailored to your skills and career goals. Our intelligent platform helps you save time and land opportunities that matter.
                     </p>
@@ -35,7 +35,7 @@ export default function Footer() {
                 </div>
             </div>
             <p className="pt-4 text-center pb-5">
-                Copyright 2024 © sneh. All Right Reserved.
+                Copyright 2024 © InternNexus. All Right Reserved.
             </p>
         </footer>
     );

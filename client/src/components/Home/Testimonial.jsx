@@ -63,7 +63,7 @@ const Testimonial = () => {
   );
 
   return (
-    <div className="mt-35">
+    <div className="mt-30">
       <style>{`
         @keyframes marqueeScroll {
           0% { transform: translateX(0%); }

@@ -8,9 +8,7 @@ export const FaqSection = () => {
     const [openIndex, setOpenIndex] = useState(null);
     
     return (
-        <div className="relative max-w-2xl mx-auto flex flex-col items-center justify-center px-4 md:px-0 mt-35">
-            <img className="absolute -mb-120 -left-40 -z-10 pointer-events-none" src={theme === "dark" ? "../../assets/color-splash.svg" : "../../assets/color-splash-light.svg"} alt="color-splash" width={1000} height={1000} priority fetchPriority="high" />
-            {/* <SectionTitle text1="FAQ's" text2="Frequently asked questions" text3="Ship Beautiful Frontends Without the Overhead — Customizable, Scalable, and Developer-Friendly UI Components." /> */}
+        <div className="relative max-w-2xl mx-auto flex flex-col items-center justify-center px-4 md:px-0 mt-30">
             <p className="text-center font-medium text-indigo-600 dark:text-indigo-400 mt-28 px-10 py-2 rounded-full bg-slate-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-700 w-max mx-auto">FAQ's</p>
             <h3 className="text-3xl font-semibold text-center mx-auto mt-4">Frequently asked questions</h3>
             <div className="mt-8">
