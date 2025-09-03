@@ -8,7 +8,18 @@ import instagram from "./companies-logo/instagram.svg";
 import microsoft from "./companies-logo/microsoft.svg";
 import walmart from "./companies-logo/walmart.svg";
 import user_image from "./user_image.png";
+import bg_ai from "./BG_AI.png"
 import { Brain, Send, BadgeCheck, Smartphone } from "lucide-react";
+
+
+export const assets = {
+  logo,
+  logo_dark,
+  choose,
+  star_group,
+  user_image,
+  bg_ai,
+}
 
 export const companiesLogo = [
   { name: "Framer", logo: framer },
@@ -17,14 +28,6 @@ export const companiesLogo = [
   { name: "Microsoft", logo: microsoft },
   { name: "Walmart", logo: walmart },
 ];
-
-export const assets = {
-    logo,
-    logo_dark,
-    choose,
-    star_group,
-    user_image,
-}
 
 export const cardsData = [
     {
@@ -255,7 +258,6 @@ export const internships = [
 ];
 
 export const steps = [
-    "Basic Info",
     "Education",
     "Skills",
     "Fields of Interest",

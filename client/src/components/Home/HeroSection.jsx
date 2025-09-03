@@ -2,9 +2,23 @@ import React from 'react'
 import Marquee from "react-fast-marquee";
 import { assets, companiesLogo } from '@/assets/assets'
 import { useNavigate } from 'react-router-dom';
+import { useUser, useClerk } from '@clerk/clerk-react'
 
 const HeroSection = () => {
   const navigate = useNavigate();
+  const { isSignedIn } = useUser();
+  const { openSignIn } = useClerk();
+
+  const handleGetStarted = () => {
+    if (isSignedIn) {
+      navigate('/quizform')
+    } else {
+      openSignIn({
+        afterSignInUrl: "/quizform",
+        afterSignUpUrl: "/quizform",
+      });
+    }
+  }
 
   return (
     <div className="mt-[60px] lg:mt-[67px] sm:mt-[92px] md:mt-[79px]  bg-gradient-to-b from-blue-800 to-blue-600 pt-16 sm:pt-20 relative text-white overflow-hidden">
@@ -47,7 +61,7 @@ const HeroSection = () => {
           {/* CTA Button */}
           <div className="flex items-center justify-center md:justify-start gap-4 my-8">
             <button
-              onClick={() => navigate('/quizform')}
+              onClick={handleGetStarted}
               className="flex items-center justify-center gap-2 rounded-full px-4 sm:px-6 py-2 sm:py-3 text-lg sm:text-xl font-bold bg-white text-black hover:scale-110 transition-all duration-500"
             >
               Get Started
@@ -75,7 +89,7 @@ const HeroSection = () => {
         </div>
 
         {/* Marquee Section */}
-        <Marquee gradient={false} speed={50} className="w-full">
+        <Marquee gradient={false} speed={80} className="w-full">
           <div className="flex items-center">
             {[...companiesLogo, ...companiesLogo].map((company, index) => (
               <img
