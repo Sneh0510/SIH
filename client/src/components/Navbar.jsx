@@ -65,7 +65,7 @@ const Navbar = () => {
 
     return (
         <nav className="w-full fixed top-0 z-50 bg-white shadow-md">
-            
+
             {/* Top Navbar */}
             <div className="flex items-center justify-between px-4 sm:px-6 md:px-8 lg:px-12 py-2 border-b border-gray-200">
                 <div className="flex items-center justify-center">
@@ -115,7 +115,7 @@ const Navbar = () => {
                         {openLang && (
                             <div className="absolute bg-white border border-gray-300 rounded shadow-md mt-2 w-32 z-50">
                                 <ul className="flex flex-col text-left">
-                                    {["English","Hindi", "Gujarati", "Marathi"].map((lang) => (
+                                    {["English", "Hindi", "Gujarati", "Marathi"].map((lang) => (
                                         <li
                                             key={lang}
                                             className="px-4 py-2 cursor-pointer hover:bg-gray-100"
@@ -195,19 +195,63 @@ const Navbar = () => {
             {/* Mobile Dropdown Menu */}
             {openMobileMenu && (
                 <div className="md:hidden flex flex-col items-start px-6 py-4 gap-4 text-base font-medium bg-white border-t border-gray-300">
-                    <Link to="/" onClick={() => setOpenMobileMenu(false)}>Home</Link>
-                    <Link to="/about" onClick={() => setOpenMobileMenu(false)}>About</Link>
-                    <Link to="/services" onClick={() => setOpenMobileMenu(false)}>Services</Link>
-                    <button onClick={() => setOpenLang(!openLang)}>{selectedLang}</button>
-                    <button onClick={() => setOpenMore(!openMore)}>More ▾</button>
-                    {openMore && (
-                        <div className="flex flex-col gap-2 pl-4">
-                            <Link to="/blog" onClick={() => setOpenMobileMenu(false)}>Blog</Link>
-                            <Link to="/careers" onClick={() => setOpenMobileMenu(false)}>Careers</Link>
-                        </div>
-                    )}
+
+                    <Link to="/" onClick={() => setOpenMobileMenu(false)} className="px-3 py-1 rounded-lg hover:bg-gray-100 w-full">Home</Link>
+                    <Link to="/about" onClick={() => setOpenMobileMenu(false)} className="px-3 py-1 rounded-lg hover:bg-gray-100 w-full">About</Link>
+                    <Link to="/services" onClick={() => setOpenMobileMenu(false)} className="px-3 py-1 rounded-lg hover:bg-gray-100 w-full">Services</Link>
+
+                    {/* Language Dropdown */}
+                    <div ref={dropdownRef} className="relative w-full">
+                        <button
+                            onClick={() => setOpenLang(!openLang)}
+                            className="px-3 py-1 rounded-lg hover:bg-gray-100 w-full text-left"
+                        >
+                            {selectedLang}
+                        </button>
+                        {openLang && (
+                            <div className="absolute left-0 mt-2 w-full bg-white border border-gray-300 rounded shadow-md z-50">
+                                <ul className="flex flex-col text-left">
+                                    {["English", "Hindi", "Gujarati", "Marathi"].map((lang) => (
+                                        <li
+                                            key={lang}
+                                            className="px-4 py-2 cursor-pointer hover:bg-gray-100"
+                                            onClick={() => {
+                                                handleSelect(lang);
+                                                setOpenMobileMenu(false); // close mobile menu after selection
+                                            }}
+                                        >
+                                            {lang}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        )}
+                    </div>
+
+                    {/* More Dropdown */}
+                    <div ref={moreDropdownRef} className="relative w-full">
+                        <button
+                            onClick={() => setOpenMore(!openMore)}
+                            className="px-3 py-1 rounded-lg hover:bg-gray-100 w-full text-left"
+                        >
+                            More ▾
+                        </button>
+                        {openMore && (
+                            <div className="absolute left-0 mt-2 w-full bg-white border border-gray-300 rounded shadow-md z-50">
+                                <ul className="flex flex-col text-left">
+                                    <li className="px-4 py-2 hover:bg-gray-100">
+                                        <Link to="/blog" onClick={() => setOpenMobileMenu(false)}>Blog</Link>
+                                    </li>
+                                    <li className="px-4 py-2 hover:bg-gray-100">
+                                        <Link to="/careers" onClick={() => setOpenMobileMenu(false)}>Careers</Link>
+                                    </li>
+                                </ul>
+                            </div>
+                        )}
+                    </div>
                 </div>
             )}
+
         </nav>
     );
 };
