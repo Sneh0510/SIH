@@ -1,0 +1,81 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.env
+.env.local
+.env.*.local
+
+# Build output
+dist/
+build/
+.next/
+out/
+.cache/
+
+# Logs
+logs
+*.log
+logs/*.log
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE settings
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Python / Django
+__pycache__/
+*.py[cod]
+*.sqlite3
+*.db
+*.pyo
+*.pyd
+*.pdb
+*.egg-info/
+*.egg
+*.manifest
+*.spec
+
+# Virtual environments
+venv/
+env/
+.venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Static / media files (Django)
+media/
+staticfiles/
+
+# Coverage / testing
+coverage/
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+.cache/
+.jest/
+
+# Deployment
+*.pem
+*.key
+*.crt
+
+# Misc
+*.tgz
+*.tar.gz
+*.zip
+*.bak
+*.tmp
