@@ -1,9 +1,10 @@
 import React from 'react'
+import ServicesHero from '../components/Services/ServicesHero'
 
 const Services = () => {
   return (
     <div>
-      Services
+      <ServicesHero />
     </div>
   )
 }

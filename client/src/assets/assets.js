@@ -9,6 +9,10 @@ import microsoft from "./companies-logo/microsoft.svg";
 import walmart from "./companies-logo/walmart.svg";
 import user_image from "./user_image.png";
 import bg_ai from "./BG_AI.png"
+import about_hero from "./about_hero.png"
+import employer from "./employer.png";
+import university from "./university.png";
+import student from "./student.png";
 import { Brain, Send, BadgeCheck, Smartphone } from "lucide-react";
 
 
@@ -19,6 +23,10 @@ export const assets = {
   star_group,
   user_image,
   bg_ai,
+  about_hero,
+  employer,
+  university,
+  student,
 }
 
 export const companiesLogo = [
