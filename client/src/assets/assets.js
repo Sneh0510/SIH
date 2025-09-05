@@ -13,8 +13,11 @@ import about_hero from "./about_hero.png"
 import employer from "./employer.png";
 import university from "./university.png";
 import student from "./student.png";
+<<<<<<< HEAD
 import resume from "./resume.png"
 import application_tracking from "./application_tracking.png"
+=======
+>>>>>>> 2d2400affb92415edb133e8f36391297aac72ed6
 import { Brain, Send, BadgeCheck, Smartphone } from "lucide-react";
 
 
@@ -29,8 +32,11 @@ export const assets = {
   employer,
   university,
   student,
+<<<<<<< HEAD
   resume,
   application_tracking,
+=======
+>>>>>>> 2d2400affb92415edb133e8f36391297aac72ed6
 }
 
 export const companiesLogo = [
