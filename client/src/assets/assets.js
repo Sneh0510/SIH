@@ -8,18 +8,17 @@ import instagram from "./companies-logo/instagram.svg";
 import microsoft from "./companies-logo/microsoft.svg";
 import walmart from "./companies-logo/walmart.svg";
 import user_image from "./user_image.png";
-import bg_ai from "./BG_AI.png"
+import bg_ai from "./BG_AI.jpg"
 import about_hero from "./about_hero.png"
 import employer from "./employer.png";
 import university from "./university.png";
 import student from "./student.png";
-<<<<<<< HEAD
 import resume from "./resume.png"
 import application_tracking from "./application_tracking.png"
-=======
->>>>>>> 2d2400affb92415edb133e8f36391297aac72ed6
-import { Brain, Send, BadgeCheck, Smartphone } from "lucide-react";
-
+import get_started_image from "./get_started_image.jpg";
+import contact_us from "./contact_us.png"
+import ai from "./ai.png"
+import { Brain, Send, BadgeCheck, Smartphone,Users, Bell } from "lucide-react";
 
 export const assets = {
   logo,
@@ -32,11 +31,11 @@ export const assets = {
   employer,
   university,
   student,
-<<<<<<< HEAD
   resume,
   application_tracking,
-=======
->>>>>>> 2d2400affb92415edb133e8f36391297aac72ed6
+  get_started_image,
+  contact_us,
+  ai
 }
 
 export const companiesLogo = [
@@ -52,27 +51,45 @@ export const cardsData = [
       image: 'https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=200',
       name: 'Briar Martin',
       handle: '@neilstellar',
+      quote: "Using this platform was a game-changer. I landed my dream internship in weeks!",
       date: 'April 20, 2025'
     },
     {
       image: 'https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=200',
       name: 'Avery Johnson',
       handle: '@averywrites',
+      quote: "The AI matching is incredibly accurate. It saved me so much time sifting through irrelevant jobs.",
       date: 'May 10, 2025'
     },
     {
       image: 'https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=200&auto=format&fit=crop&q=60',
       name: 'Jordan Lee',
       handle: '@jordantalks',
+      quote: "I love how easy it is to apply for multiple internships with just a few clicks.",
       date: 'June 5, 2025'
     },
     {
       image: 'https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=200&auto=format&fit=crop&q=60',
-      name: 'Avery Johnson',
-      handle: '@averywrites',
-      date: 'May 10, 2025'
+      name: 'Alex Chen',
+      handle: '@alex_dev',
+      quote: "The real-time alerts were a lifesaver. I was able to apply to a new opening before anyone else.",
+      date: 'June 25, 2025'
     },
-  ];
+    {
+        image: 'https://images.unsplash.com/photo-1628157588553-5eeea00af15c?w=200&auto=format&fit=crop&q=60',
+        name: 'Samantha Ray',
+        handle: '@samantharay',
+        quote: "The peer community helped me get valuable insights and advice from others in my field. Highly recommended!",
+        date: 'July 1, 2025'
+    },
+    {
+        image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&auto=format&fit=crop&q=60',
+        name: 'Chris Evans',
+        handle: '@cevans_design',
+        quote: "A must-have for any student looking for internships. The platform is sleek, modern, and very user-friendly.",
+        date: 'July 15, 2025'
+    },
+];
 
 export const faqsData = [
   {
@@ -142,6 +159,16 @@ export const featuresData = [
     title: "Accessible Anywhere",
     description: "Mobile-friendly design so you can explore internships anytime, anywhere.",
   },
+  {
+    icon: Users, // This icon needs to be imported, e.g., from 'lucide-react'
+    title: "Connect with Peers",
+    description: "Join our community to network with other interns and professionals in your field.",
+  },
+  {
+    icon: Bell, // This icon also needs to be imported
+    title: "Real-time Alerts",
+    description: "Receive instant notifications for new job postings that match your preferences.",
+  },
 ];
 
 export const internships = [
@@ -193,86 +220,6 @@ export const internships = [
     duration: "3 Months",
     activelyHiring: true,
   },
-  {
-    role: "Graphic Designer",
-    company: "Byju's",
-    location: "Bengaluru",
-    stipend: "₹6,000 - 8,000 /month",
-    duration: "2 Months",
-    activelyHiring: false,
-  },
-  {
-    role: "Data Analyst Intern",
-    company: "Paytm",
-    location: "Noida",
-    stipend: "₹15,000 - 18,000 /month",
-    duration: "5 Months",
-    activelyHiring: true,
-  },
-  {
-    role: "Sales Intern",
-    company: "Urban Company",
-    location: "Gurgaon",
-    stipend: "₹8,000 - 10,000 /month",
-    duration: "3 Months",
-    activelyHiring: true,
-  },
-  {
-    role: "Content Writing Intern",
-    company: "YourStory",
-    location: "Bengaluru",
-    stipend: "₹5,000 - 7,000 /month",
-    duration: "2 Months",
-    activelyHiring: false,
-  },
-  {
-    role: "Operations Intern",
-    company: "Swiggy",
-    location: "Hyderabad",
-    stipend: "₹12,000 - 14,000 /month",
-    duration: "4 Months",
-    activelyHiring: true,
-  },
-  {
-    role: "UI/UX Designer",
-    company: "OYO Rooms",
-    location: "Gurgaon",
-    stipend: "₹10,000 - 12,000 /month",
-    duration: "3 Months",
-    activelyHiring: true,
-  },
-  {
-    role: "Customer Support",
-    company: "Meesho",
-    location: "Bengaluru",
-    stipend: "₹7,000 - 9,000 /month",
-    duration: "3 Months",
-    activelyHiring: false,
-  },
-  {
-    role: "Business Development Intern",
-    company: "Unacademy",
-    location: "Pune",
-    stipend: "₹9,000 - 11,000 /month",
-    duration: "3 Months",
-    activelyHiring: true,
-  },
-  {
-    role: "Finance Intern",
-    company: "HDFC Bank",
-    location: "Mumbai",
-    stipend: "₹14,000 - 16,000 /month",
-    duration: "6 Months",
-    activelyHiring: true,
-  },
-  {
-    role: "Digital Marketing Intern",
-    company: "Nykaa",
-    location: "Delhi",
-    stipend: "₹10,000 - 13,000 /month",
-    duration: "4 Months",
-    activelyHiring: true,
-  },
 ];
 
 export const steps = [
@@ -282,20 +229,20 @@ export const steps = [
     "Availability",
 ];
 
-export const skillSuggestions = [
-    "React.js",
-    "Node.js",
-    "Python",
-    "Django",
-    "Machine Learning",
-    "Data Analysis",
-    "SQL",
-    "MongoDB",
-    "Java",
-    "C++",
-    "Communication",
-    "Problem Solving",
-];
+// export const skillSuggestions = [
+//     "React.js",
+//     "Node.js",
+//     "Python",
+//     "Django",
+//     "Machine Learning",
+//     "Data Analysis",
+//     "SQL",
+//     "MongoDB",
+//     "Java",
+//     "C++",
+//     "Communication",
+//     "Problem Solving",
+// ];
 
 export const fieldSuggestions = [
     "Web Development",
@@ -306,4 +253,42 @@ export const fieldSuggestions = [
     "Cloud Computing",
     "UI/UX Design",
     "Software Engineering",
+];
+
+export const educationSuggestions = [
+  "High School",
+  "Bachelor's Degree",
+  "Master's Degree",
+  "PhD",
+];
+
+export const sectorSuggestions = [
+  { name: "Technology", icon: "💻" },
+  { name: "Design", icon: "🎨" },
+  { name: "Marketing", icon: "📈" },
+  { name: "Healthcare", icon: "⚕️" },
+  { name: "Finance", icon: "💰" },
+  { name: "Social Impact", icon: "🤝" },
+  { name: "Public Administration", icon: "🏛️" },
+  { name: "Education", icon: "🏫" },
+];
+
+export const skillSuggestions = [
+  "Python",
+  "JavaScript",
+  "Data Analysis",
+  "UI/UX Design",
+  "Content Writing",
+  "Social Media Marketing",
+  "Project Management",
+  "Public Speaking",
+  "Research",
+];
+
+export const motivationSuggestions = [
+  "Learn New Skills",
+  "Earn a Stipend",
+  "Gain Experience",
+  "Make a Social Impact",
+  "Build a Network",
 ];
