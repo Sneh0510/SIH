@@ -18,6 +18,7 @@ import application_tracking from "./application_tracking.png"
 import get_started_image from "./get_started_image.jpg";
 import contact_us from "./contact_us.png"
 import ai from "./ai.png"
+import modi from "./modi_1.png"
 import { Brain, Send, BadgeCheck, Smartphone,Users, Bell } from "lucide-react";
 
 export const assets = {
@@ -35,7 +36,8 @@ export const assets = {
   application_tracking,
   get_started_image,
   contact_us,
-  ai
+  ai,
+  modi
 }
 
 export const companiesLogo = [
